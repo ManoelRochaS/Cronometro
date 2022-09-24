@@ -1,0 +1,158 @@
+
+/*Media Queries - horizontal orientation*/
+
+/*-Class A General - (Body)-*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+    /*--Class B (General) - (Main) --*/
+    .Main{
+        width: 50vw;
+        height: 75vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        background-color: rgb(10, 10, 56, 1);
+    }
+
+        /*---Class C (General) - (header, BoxButtons, Interface) ---*/
+        header, .BoxButtons, .Interface{
+            width: 50vw;
+            height: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*---Class C (header) - (Title - h1 -) ---*/
+            header h1{
+                font-family: Azonix;
+                font-size: 5vw;
+            }
+        
+        /*---Class C (BoxButtons) - (Buttons - h2 -) ---*/
+        .BoxButtons{
+            width: 40vw;
+            justify-content: space-around;
+        }
+            .BoxButtons h2{
+                width: 8vw;
+                text-align: center;
+                font-size: 2vw;
+                padding: 2vh;
+            }
+            .BoxButtons h2:hover{
+                padding: 1.5vh;
+                border: 0.5vh solid white;
+            }
+            #ButtonStart:hover{
+                background-color: rgb(14, 119, 14);
+            }
+            #ButtonStop:hover{
+                background-color: rgb(227, 38, 54);
+            }
+            #ButtonReset:hover{
+                background-color: rgb(87, 87, 87);
+            }
+        
+        /*---Class C (Interface) - (Display -h3 and h4 -) ---*/
+            .Interface h3{
+                width: 4vw;
+                height: 4vw;
+                padding: 0.2vw;
+                font-size: 4vw;
+                font-family: f-digital;
+                text-align: center;
+            }
+            .Interface h5{
+                font-size: 4vw;
+                font-family: f-digital;
+            }
+            .Interface h4{
+                width: 3vw;
+                height: 3.1vw;
+                padding: 0.2vw;
+                padding-top: 1vw;
+                padding-bottom: 0.3vw;
+                font-size: 3vw;
+                font-family: f-digital;
+                text-align: center;
+            }
+
+/*Media Queries - Orientação Vertical*/
+
+@media all and (orientation: portrait){
+/*-Class A General - (Body)-*/
+    /*--Class B (General) - (Main) --*/
+    .Main{
+        width: 80vw;
+        height: 81vh;
+    }
+
+        /*---Class C (General) - (header, BoxButtons, Interface) ---*/
+        header, .BoxButtons, .Interface{
+            width: 80vw;
+            height: 27vh;
+        }
+
+        /*---Class C (header) - (Title - h1 -) ---*/
+
+            header h1{
+                font-size: 8vw;
+            }
+        
+        /*---Class C (BoxButtons) - (Buttons - h2 -) ---*/
+        .BoxButtons{
+            width: 60vw;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+            .BoxButtons h2{
+                width: 22vw;
+                margin:0vh 10vw ;
+                font-size: 4vw;
+                padding: 2vh;
+            }
+        
+        /*---Class C (Interface) - (Display -h3 and h4 -) ---*/
+            .Interface h3{
+                width: 10vw;
+                height: 10vw;
+                padding: 0.5vw;
+                font-size: 10vw;
+            }
+            .Interface h5{
+                font-size: 10vw;
+            }
+            .Interface h4{
+                width: 7.5vw;
+                height: 7vw;
+                padding: 0.5vw;
+                padding-top: 2.8vw;
+                padding-bottom: 1.2vw;
+                font-size: 7.5vw;
+            }
+}
+
+
+
+@font-face {
+    font-family: Azonix;
+    src: url(./font_text/Azonix.otf);
+}
+
+@font-face {
+    font-family: f-digital;
+    src: url(./font_text/f-digital.TTF);
+}
