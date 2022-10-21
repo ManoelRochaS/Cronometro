@@ -1,0 +1,143 @@
+
+/*Media Queries - horizontal orientation*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 12.5vh 25vw;
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+    header{
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(10, 10, 56, 1);
+    }
+        header h1{
+            font-family: Azonix;
+            font-size: 5vw;
+        }
+    main{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-flow: column wrap;
+    }
+        main .BoxButtons{
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(10, 10, 56, 1);
+        }
+            .BoxButtons h2{
+                font-size: 2vw;
+                width: 7vw;
+                padding: 2vh;
+                text-align: center;
+            }
+            .BoxButtons h2:hover{
+                padding: 1.5vh;
+                border: 0.5vh solid white;
+            }
+            .BoxButtons #ButtonStart:hover{
+                background-color: rgb(14, 119, 14);
+            }
+            .BoxButtons #ButtonStop:hover{
+                background-color: rgb(227, 38, 54);
+            }
+            .BoxButtons #ButtonReset:hover{
+                background-color: rgb(87, 87, 87);
+            }
+        main .Interface{
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content:center;
+            align-items: center;
+            font-family: f-digital;
+            background-color: rgb(10, 10, 56, 1);
+        }
+            .Interface .Time{
+                font-size: 8vh;
+                width: 9vh;
+                height: 8vh;
+                text-align: center;
+            }
+            .Interface .Setting{
+                font-size: 5vh;
+                height: 5.5vh;
+                padding: 1.25vh 1vh;
+            }
+            .Interface .SettingOther{
+                font-size: 5vh;
+                height: 5vh;
+                padding: 2.3vh 0.2vh 0.7vh;
+            }
+            .Interface .TimeOther{
+                font-size: 3.5vh;
+                height: 3.5vh;
+                width: 4vh;
+                padding: 3.8vh 0.2vh 0.7vh;
+                text-align: center;
+            }
+        
+/*Media Queries - Orientação Vertical*/
+
+@media all and (orientation: portrait){
+
+body{
+    margin: 9.5vh 8vw;
+    width: 84vw;
+    height: 81vh;
+}
+    header{
+        height: 19vh;
+    }
+        header h1{
+            font-size: 4.5vh;
+        }
+    main{
+        height: 62vh;
+    }
+        main .BoxButtons{
+            height: 31vh;
+            flex-flow: column wrap;
+        }
+            .BoxButtons h2{
+                font-size: 3vh;
+                width: 15vh;
+                padding: 2vh;
+            }
+            .BoxButtons h2:hover{
+                padding: 1.7vh;
+                border: 0.3vh solid white;
+            }
+        main .Interface{
+            height: 31vh;
+        }
+}
+
+
+@font-face {
+    font-family: Azonix;
+    src: url(./font_text/Azonix.otf);
+}
+
+@font-face {
+    font-family: f-digital;
+    src: url(./font_text/f-digital.TTF);
+}
