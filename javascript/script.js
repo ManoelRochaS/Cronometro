@@ -1,50 +1,46 @@
 
-/*Declaration of variables*/
-let Hours = 0;
-let Minutes = 0;
-let Seconds = 0;
-let Miliseconds = 0;
+const buttonStart = document.getElementById("buttonStart");
+const buttonPause = document.getElementById("buttonPause");
+const buttonRestart = document.getElementById("buttonRestart");
+const Time = document.getElementsByClassName("Time");
+let vetor = [0,0,0,0];
 let cronometro;
 
-/*Auxiliary Functions*/
-function Setting(date){
-    return date >= 10 ? date : `0${date}`; 
-}
+buttonStart.addEventListener("click", ()=>{
+    clearInterval(cronometro);
+    cronometro = setInterval(()=>{
+        counter();
+    },10)
+})
+
+buttonPause.addEventListener("click", ()=>{
+    clearInterval(cronometro);
+})
+
+buttonRestart.addEventListener("click", ()=>{
+    for(let i = 0; i < 4; i++){
+        Time[i].innerText = `00`;
+        vetor[i] = 0;
+    }
+})
+
 function counter(){
-    if(Miliseconds == 100){
-        Seconds += 1;
-        Miliseconds = 0;
+    validation(3,100);
+    validation(2,60);
+    validation(1,60);
+    for(var i = 0; i < 4; i++){
+        Time[i].innerText = `${SettingText(vetor[i])}`
     }
-    if(Seconds == 60){
-        Minutes += 1;
-        Seconds = 0;
-    }
-    if(Minutes == 60){
-        Hours += 1;
-        Minutes = 0;
-    }
-    document.getElementById('Hours').innerText = `${Setting(Hours)}`;
-    document.getElementById('Minutes').innerText = `${Setting(Minutes)}`;
-    document.getElementById('Seconds').innerText = `${Setting(Seconds)}`;
-    document.getElementById('Miliseconds').innerText = `${Setting(Miliseconds)}`;
-    Miliseconds+= 1;
+    vetor[3] += 1;
 }
 
-/*Main Functions - Described by your Name*/
-function start(){
-    pause();
-    cronometro =  setInterval(()=>{counter();}, 10);
+function validation(index, value){
+    if(vetor[index] == value){
+        vetor[index-1] += 1;
+        vetor[index] = 0;
+    }
 }
-function pause(){
-    clearInterval(cronometro);
-}
-function reset(){
-    Hours = 0;
-    Minutes = 0;
-    Seconds = 0;
-    Miliseconds = 0;
-    document.getElementById('Hours').innerText = `00`;
-    document.getElementById('Minutes').innerText = `00`;
-    document.getElementById('Seconds').innerText = `00`;
-    document.getElementById('Miliseconds').innerText = `00`;
+
+function SettingText(date){
+    return date >= 10 ? date : `0${date}`; 
 }

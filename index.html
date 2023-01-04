@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Modo Crônometro</title>
-      <link href="./css/style.css" type="text/css" rel="stylesheet">
-      <link href="./css/photoGallery/icon.png" rel="icon">
-  </head>
-    <body>
-      <header>
-        <h1>Crônometro</h1>
-      </header>
-      <main>
-        <section class="BoxButtons">
-          <h2 id="ButtonStart" onclick="start()">Iniciar</h2>
-          <h2 id="ButtonStop" onclick="pause()">Parar</h2>
-          <h2 id="ButtonReset" onclick="reset()">Resetar</h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Crônometro</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <link href="./css/photoGallery/icon.png" rel="icon">
+</head>
+<body>
+    <header>
+        <h1>Cronômetro</h1>
+    </header>
+    <main>
+        <section class="boxButtons">
+            <p id="buttonStart">Iniciar</p>
+            <p id="buttonPause">Pausar</p>
+            <p id="buttonRestart">Reiniciar</p>
         </section>
-        <section class="Interface">
-          <h3 class="Time" id="Hours">00</h3>
-          <h3 class="Setting">:</h3>
-          <h3 class="Time" id="Minutes">00</h3>
-          <h3 class="Setting">:</h3>
-          <h3 class="Time" id="Seconds">00</h3>
-          <h3 class="SettingOther">.</h3>
-          <h3 class="TimeOther" id="Miliseconds">00</h3>
+        <section class="display">
+            <h2 class="TimesHMS Time">00</h2>
+            <h2 class="Setting">:</h2>
+            <h2 class="TimesHMS Time">00</h2>
+            <h2 class="Setting">:</h2>
+            <h2 class="TimesHMS Time">00</h2>
+            <h2 class="SettingMM">.</h2>
+            <h2 class="TimeMS Time">00</h2>
         </section>
-      </main>
-      <script src="./javascript/script.js"></script>
-    </body>
+    </main>
+    <script src="./javascript/script.js"></script>
+</body>
 </html>
