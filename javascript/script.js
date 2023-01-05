@@ -1,11 +1,15 @@
 
+/*Declaração de Constantes (Id e Class) - buttonStart, buttonPause, buttonRestart e Time*/
 const buttonStart = document.getElementById("buttonStart");
 const buttonPause = document.getElementById("buttonPause");
 const buttonRestart = document.getElementById("buttonRestart");
 const Time = document.getElementsByClassName("Time");
+
+/*Declaração de Variáveis (Vetores e auxiliares) - vetor e cronometro*/
 let vetor = [0,0,0,0];
 let cronometro;
 
+/*Funções Principais - () /Start/, () /Pause/ e () /Restart/ */
 buttonStart.addEventListener("click", ()=>{
     clearInterval(cronometro);
     cronometro = setInterval(()=>{
@@ -24,6 +28,7 @@ buttonRestart.addEventListener("click", ()=>{
     }
 })
 
+/*Funções Auxiliares (CSS) - counter(), validation(index, value) e SettingText(date)*/
 function counter(){
     validation(3,100);
     validation(2,60);
